@@ -2,7 +2,6 @@ import React from 'react';
 import { Switch, BrowserRouter as Router, Route } from 'react-router-dom'
 import routes from "./routes";
 // import withTracker from "./withTracker";
-import Page404 from "./components/common/Page404/Page404";
 import './App.css';
 
 function App() {
