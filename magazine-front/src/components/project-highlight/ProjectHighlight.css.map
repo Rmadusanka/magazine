@@ -1,9 +1,0 @@
-{
-    "version": 3,
-    "mappings": "AAAA,AAAA,uBAAuB,CAAC;EACpB,UAAU,EAAE,MAAM;EAClB,MAAM,EAAE,KAAK;CAChB",
-    "sources": [
-        "ProjectHighlight.scss"
-    ],
-    "names": [],
-    "file": "ProjectHighlight.css"
-}

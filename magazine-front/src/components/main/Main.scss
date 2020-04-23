@@ -1,3 +1,5 @@
+@import "src/assets/scss/variables.scss";
+
 .main-page {
     .mn-header {
         height: 50px;
@@ -8,10 +10,16 @@
         display: flex;
         width: 100%;
         .mn-left-content {
-            width: 25%;
+            width: 215px;
             float: left;
+
+            @include mq('tablet-wide', max) {
+                display: none;
+            }
+
             .mn-section-header {
                 position: fixed;
+                width: 200px;
                 top: 50px;
                 left: 10px;
                 background: skyblue;
@@ -31,17 +39,35 @@
         }
 
         .mn-center-content {
-            width: 50%;
+            width: calc(100% - 430px);
             max-width: 960px;
             margin: auto;
+            @include mq('tablet-wide', max) {
+                width: calc(100% - 210px);
+                margin: 0;
+            }
+
+            @include mq('tablet', max) {
+                width: 100%;
+            }
         }
 
         .mn-right-content {
             position: relative;
-            width: 25%;
+            width: 215px;
             float: right;
+
+            @include mq('tablet-wide', max) {
+                width: auto;
+            }
+
+            @include mq('tablet', max) {
+                display: none;
+            }
+
             .navigation-menu {
                 position: fixed;
+                width: 200px;
                 top: 50px;
                 right: 10px;
                 background: skyblue;

@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 
-import './Portfolio.css';
+import './Portfolio.scss';
 
 export default class Portfolio extends Component {
     render() {

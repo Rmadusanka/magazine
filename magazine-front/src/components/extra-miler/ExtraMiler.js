@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 
-import './ExtraMiler.css';
+import './ExtraMiler.scss';
 
 export default class ExtraMiler extends Component {
     render() {

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import './Milestone.css';
+import './Milestone.scss';
 
 export default class Milestone extends Component {
     render() {

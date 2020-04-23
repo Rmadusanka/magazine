@@ -1,9 +1,0 @@
-{
-    "version": 3,
-    "mappings": "AAAA,AAAA,eAAe,CAAC;EACZ,UAAU,EAAE,KAAK;EACjB,MAAM,EAAE,KAAK;CAChB",
-    "sources": [
-        "Milestone.scss"
-    ],
-    "names": [],
-    "file": "Milestone.css"
-}

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import './ProjectHighlight.css';
+import './ProjectHighlight.scss';
 
 export default class ProjectHighlight extends Component {
     render() {

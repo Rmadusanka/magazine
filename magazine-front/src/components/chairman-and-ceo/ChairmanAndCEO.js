@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 
-import './ChairmanAndCEO.css';
+import './ChairmanAndCEO.scss';
 
 export default class ChairmanAndCEO extends Component {
     render() {

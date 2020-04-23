@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import './TeamArticle.css';
+import './TeamArticle.scss';
 
 export default class TeamArticle extends Component {
     render() {

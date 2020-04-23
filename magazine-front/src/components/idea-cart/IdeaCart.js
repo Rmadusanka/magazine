@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 
-import './IdeaCart.css';
+import './IdeaCart.scss';
 
 export default class IdeaCart extends Component {
     render() {

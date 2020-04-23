@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import Scrollspy from 'react-scrollspy'
 
 // CSS styles
-import './Main.css';
+import './Main.scss';
 
 // Components
 import Header from '../common/header/Header';
