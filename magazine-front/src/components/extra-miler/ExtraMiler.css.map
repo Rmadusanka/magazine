@@ -1,6 +1,6 @@
 {
     "version": 3,
-    "mappings": "",
+    "mappings": "AAAA,AAAA,iBAAiB,CAAC;EACd,UAAU,EAAE,IAAI;EAChB,MAAM,EAAE,KAAK;CAChB",
     "sources": [
         "ExtraMiler.scss"
     ],

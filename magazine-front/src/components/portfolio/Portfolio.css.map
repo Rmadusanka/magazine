@@ -1,6 +1,6 @@
 {
     "version": 3,
-    "mappings": "",
+    "mappings": "AAAA,AAAA,cAAc,CAAC;EACX,UAAU,EAAE,IAAI;EAChB,MAAM,EAAE,KAAK;CAChB",
     "sources": [
         "Portfolio.scss"
     ],

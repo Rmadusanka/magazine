@@ -1,10 +1,12 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
+
+import './Milestone.css';
 
 export default class Milestone extends Component {
     render() {
         return (
-            <div>
-                
+            <div className="milestone-page">
+                Milestone
             </div>
         )
     }

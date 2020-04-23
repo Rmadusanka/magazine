@@ -3,6 +3,7 @@ import { Switch, BrowserRouter as Router, Route } from 'react-router-dom'
 import routes from "./routes";
 // import withTracker from "./withTracker";
 import './App.css';
+import $ from 'jquery';
 
 function App() {
   return (

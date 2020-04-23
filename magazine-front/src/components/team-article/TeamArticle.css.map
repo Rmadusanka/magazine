@@ -1,6 +1,6 @@
 {
     "version": 3,
-    "mappings": "",
+    "mappings": "AAAA,AAAA,kBAAkB,CAAC;EACf,UAAU,EAAE,KAAK;EACjB,MAAM,EAAE,KAAK;CAChB",
     "sources": [
         "TeamArticle.scss"
     ],
