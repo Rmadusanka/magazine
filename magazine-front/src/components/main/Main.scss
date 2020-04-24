@@ -13,7 +13,7 @@
             width: 215px;
             float: left;
 
-            @include mq('tablet-wide', max) {
+            @include mq("tablet-wide", max) {
                 display: none;
             }
 
@@ -23,15 +23,12 @@
                 top: 50px;
                 left: 10px;
                 background: skyblue;
-                ul {
-                    list-style: none;
-                    li {
-                        display: none;
-                        &.active {
-                            display: unset;
-                            div {
-                                color: red;
-                            }
+                .mn-section-decs {
+                    display: none;
+                    &.active {
+                        display: unset;
+                        .mn-left-title {
+                            color: red;
                         }
                     }
                 }
@@ -42,12 +39,12 @@
             width: calc(100% - 430px);
             max-width: 960px;
             margin: auto;
-            @include mq('tablet-wide', max) {
+            @include mq("tablet-wide", max) {
                 width: calc(100% - 210px);
                 margin: 0;
             }
 
-            @include mq('tablet', max) {
+            @include mq("tablet", max) {
                 width: 100%;
             }
         }
@@ -57,11 +54,11 @@
             width: 215px;
             float: right;
 
-            @include mq('tablet-wide', max) {
+            @include mq("tablet-wide", max) {
                 width: auto;
             }
 
-            @include mq('tablet', max) {
+            @include mq("tablet", max) {
                 display: none;
             }
 

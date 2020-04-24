@@ -26,15 +26,31 @@ export default class Main extends Component {
                 <div className="mn-container">
                     <div className="mn-left-content">
                         <div className="mn-section-header">
-                            <Scrollspy items={['homeSection', 'ccSection', 'taSection', 'msSection', 'emSection', 'phSection', 'portfolioSection', 'icSection']} currentClassName="active">
-                                <li className="active"><div href="#homeSection">Home</div></li>
-                                <li><div href="#ccSection">Chairman And CEO Message</div></li>
-                                <li><div href="#taSection">Team Article</div></li>
-                                <li><div href="#msSection">Epic Milestones</div></li>
-                                <li><div href="#emSection">Extra Miler</div></li>
-                                <li><div href="#phSection">Project Highlights</div></li>
-                                <li><div href="#portfolioSection">Creatives</div></li>
-                                <li><div href="#icSection">Idea Cart</div></li>
+                            <Scrollspy componentTag={'div'} items={['homeSection', 'ccSection', 'taSection', 'msSection', 'emSection', 'phSection', 'portfolioSection', 'icSection']} currentClassName="active">
+                                <div className="mn-section-decs">
+                                    <div className="mn-left-title" href="#homeSection">Home</div>
+                                </div>
+                                <div className="mn-section-decs">
+                                    <div className="mn-left-title" href="#ccSection">Chairman And CEO Message</div>
+                                </div>
+                                <div className="mn-section-decs">
+                                    <div className="mn-left-title" href="#taSection">Team Article</div>
+                                </div>
+                                <div className="mn-section-decs">
+                                    <div className="mn-left-title" href="#msSection">Epic Milestones</div>
+                                </div>
+                                <div className="mn-section-decs">
+                                    <div className="mn-left-title" href="#emSection">Extra Miler</div>
+                                </div>
+                                <div className="mn-section-decs">
+                                    <div className="mn-left-title" href="#phSection">Project Highlights</div>
+                                </div>
+                                <div className="mn-section-decs">
+                                    <div className="mn-left-title" href="#portfolioSection">Creatives</div>
+                                </div>
+                                <div className="mn-section-decs">
+                                    <div className="mn-left-title" href="#icSection">Idea Cart</div>
+                                </div>
                             </Scrollspy>
                         </div>
                     </div>
@@ -69,7 +85,7 @@ export default class Main extends Component {
                     <div className="mn-right-content">
                         <div className="navigation-menu">
                             <Scrollspy items={['homeSection', 'ccSection', 'taSection', 'msSection', 'emSection', 'phSection', 'portfolioSection', 'icSection']} currentClassName="active">
-                                <li className="active"><a href="#homeSection">Home</a></li>
+                                <li><a href="#homeSection">Home</a></li>
                                 <li><a href="#ccSection">Chairman And CEO Message</a></li>
                                 <li><a href="#taSection">Team Article</a></li>
                                 <li><a href="#msSection">Epic Milestones</a></li>
