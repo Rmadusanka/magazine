@@ -47,6 +47,10 @@
             @include mq("tablet", max) {
                 width: 100%;
             }
+
+            .bottom-spacer {
+                height: 50vh;
+            }
         }
 
         .mn-right-content {
@@ -69,11 +73,10 @@
                 right: 10px;
                 background: skyblue;
                 text-align: right;
-                ul {
-                    list-style: none;
-                    li {
+                .navigation-menu-container {
+                    .navigation-menu-item {
                         &.active {
-                            a {
+                            button {
                                 color: red;
                             }
                         }
