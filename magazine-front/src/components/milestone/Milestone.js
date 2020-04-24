@@ -6,6 +6,7 @@ export default class Milestone extends Component {
     render() {
         return (
             <div className="milestone-page">
+                <div className="top-spacer"></div>
                 Milestone
             </div>
         )

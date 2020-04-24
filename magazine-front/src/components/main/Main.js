@@ -86,9 +86,7 @@ function Main() {
 
     return (
         <div className="main-page">
-            <div className="mn-header">
-                <Header />
-            </div>
+            <Header />
             <div className="mn-container">
                 <div className="mn-left-content">
                     <div className="mn-section-header">

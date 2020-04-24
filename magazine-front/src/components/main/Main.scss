@@ -1,10 +1,6 @@
 @import "src/assets/scss/variables.scss";
 
 .main-page {
-    .mn-header {
-        height: 50px;
-    }
-
     .mn-container {
         position: relative;
         display: flex;
@@ -50,6 +46,10 @@
 
             .bottom-spacer {
                 height: 50vh;
+            }
+
+            .top-spacer {
+                height: 50px;
             }
         }
 

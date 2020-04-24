@@ -6,6 +6,7 @@ export default class IdeaCart extends Component {
     render() {
         return (
             <div className="idea-cart-page">
+                <div className="top-spacer"></div>
                 IdeaCart
             </div>
         )
