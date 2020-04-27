@@ -1,4 +1,4 @@
-import React, { useRef, useEffect, useState } from 'react';
+import React, { useRef, useEffect, useState, useCallback } from 'react';
 
 // CSS styles
 import './Main.scss';
@@ -33,8 +33,17 @@ const scrollTo = ele => {
     });
 };
 
+// let toggleHamburgerMenu = true;
+
+// function toggleMenu() {
+//     toggleHamburgerMenu = !toggleHamburgerMenu;
+//     console.log(toggleHamburgerMenu);
+// }
+
 function Main() {
+
     const [visibleSection, setVisibleSection] = useState();
+    let [toggleLeftMenu, setToggleLeftMenu] = useState(false);
 
     const headerRef = useRef(null);
     const homeSectionRef = useRef(null);
@@ -56,6 +65,11 @@ function Main() {
         { section: "portfolioSection", ref: portfolioSectionRef },
         { section: "icSection", ref: icSectionRef }
     ];
+
+    function toggleMenu() {
+        toggleLeftMenu = !toggleLeftMenu;
+        setToggleLeftMenu(toggleLeftMenu)
+    };
 
     useEffect(() => {
         const handleScroll = () => {
@@ -86,7 +100,7 @@ function Main() {
 
     return (
         <div className="main-page">
-            <Header />
+            <Header toggle={toggleMenu} />
             <div className="mn-container">
                 <div className="mn-left-content">
                     <div className="mn-section-header">
@@ -160,7 +174,7 @@ function Main() {
                     </div>
                 </div>
 
-                <div className="mn-right-content">
+                <div className={`mn-right-content ${toggleLeftMenu ? "show" : ""}`} >
                     <div className="navigation-menu">
                         <div className="navigation-menu-container" ref={headerRef}>
                             <div className={`navigation-menu-item ${

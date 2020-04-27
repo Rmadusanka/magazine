@@ -64,6 +64,10 @@
             width: 215px;
             float: right;
 
+            &.show {
+                display: block;
+            }
+
             @include mq("tablet-wide", max) {
                 width: auto;
             }
