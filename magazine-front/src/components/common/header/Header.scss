@@ -8,6 +8,8 @@
     padding: 8px 16px;
     top: 0;
     left: 0;
+    font-family: rFont;
+    font-size: 16px;
     color: #cccccc;
     z-index: 1;
     display: inline-block;
@@ -15,6 +17,7 @@
     .header-left-content {
         width: 33.33%;
         float: left;
+
         @include mq("tablet", max) {
             width: 50%;
         }

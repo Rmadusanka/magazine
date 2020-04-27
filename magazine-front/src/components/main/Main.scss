@@ -1,7 +1,7 @@
 @import "src/assets/scss/variables.scss";
 
 .main-page {
-    background: #1E1E1E;
+    background: #1e1e1e;
     .mn-container {
         position: relative;
         display: flex;
@@ -18,15 +18,20 @@
                 position: fixed;
                 width: 200px;
                 top: 80px;
-                left: 10px;
-                background: skyblue;
+                left: 16px;
                 .mn-section-decs {
                     display: none;
                     &.active {
                         display: unset;
-                        .mn-left-title {
-                            color: red;
-                        }
+                    }
+
+                    .mn-left-title {
+                        border-left: 4px solid #0387da;
+                        color: white;
+                        font-size: 24px;
+                        font-family: mFont;
+                        padding: 0 12px;
+                        line-height: 1.4;
                     }
                 }
             }
@@ -70,15 +75,54 @@
             .navigation-menu {
                 position: fixed;
                 width: 200px;
+                height: calc(100% - 160px);
                 top: 80px;
                 right: 10px;
-                background: skyblue;
+                padding-top: 48px;
                 text-align: right;
+                border-right: 1px solid #444444;
                 .navigation-menu-container {
                     .navigation-menu-item {
+                        button {
+                            position: relative;
+                            background: transparent;
+                            border: none;
+                            color: #5c5c5c;
+                            font-size: 16px;
+                            font-family: rFont;
+                            padding-right: 12px;
+                            margin-bottom: 16px;
+                            outline: none;
+
+                            &::before {
+                                position: absolute;
+                                content: "";
+                                right: -1px;
+                                top: 13px;
+                                width: 2px;
+                                height: 2px;
+                                border-radius: 8px;
+                                background: #c4c4c4;
+                            }
+                        }
+
                         &.active {
                             button {
-                                color: red;
+                                color: white;
+                                &::before {
+                                    background: white;
+                                }
+
+                                &::after {
+                                    position: absolute;
+                                    content: "";
+                                    right: -5px;
+                                    top: 9px;
+                                    width: 10px;
+                                    height: 10px;
+                                    border-radius: 8px;
+                                    border: 1px solid white;
+                                }
                             }
                         }
                     }
