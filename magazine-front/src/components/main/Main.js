@@ -14,6 +14,9 @@ import ProjectHighlight from '../project-highlight/ProjectHighlight';
 import TeamArticle from '../team-article/TeamArticle';
 import Milestone from '../milestone/Milestone';
 
+// Images
+import logo from '../../assets/images/color-logo-white-background.svg';
+
 const getDimensions = ele => {
     const { height } = ele.getBoundingClientRect();
     const offsetTop = ele.offsetTop;
@@ -44,6 +47,11 @@ function Main() {
 
     const [visibleSection, setVisibleSection] = useState();
     let [toggleLeftMenu, setToggleLeftMenu] = useState(false);
+    let [hideSplash, setHideSplash] = React.useState(false);
+    let [runAnimation, setRunAnimation] = React.useState(false);
+    let [readyToHide, setReadyToHide] = React.useState(false);
+
+
 
     const headerRef = useRef(null);
     const homeSectionRef = useRef(null);
@@ -72,6 +80,18 @@ function Main() {
     };
 
     useEffect(() => {
+        setTimeout(function () {
+            setHideSplash(true);
+        }, 3500);
+
+        setTimeout(function () {
+            setRunAnimation(true);
+        }, 0);
+
+        setTimeout(function () {
+            setReadyToHide(true);
+        }, 2500);
+
         const handleScroll = () => {
             const { height: headerHeight } = getDimensions(headerRef.current);
             const scrollPosition = window.scrollY + headerHeight;
@@ -99,179 +119,186 @@ function Main() {
     }, [visibleSection]);
 
     return (
-        <div className="main-page">
-            <Header toggle={toggleMenu} />
-            <div className="mn-container">
-                <div className="mn-left-content">
-                    <div className="mn-section-header">
-                        <div className={`mn-section-decs ${
-                            visibleSection === "homeSection" ? "active" : ""
-                            }`}>
-                            <div className="mn-left-title" href="#homeSection">Home</div>
-                        </div>
-                        <div className={`mn-section-decs ${
-                            visibleSection === "ccSection" ? "active" : ""
-                            }`}>
-                            <div className="mn-left-title" href="#ccSection">Chairman And CEO Message</div>
-                        </div>
-                        <div className={`mn-section-decs ${
-                            visibleSection === "taSection" ? "active" : ""
-                            }`}>
-                            <div className="mn-left-title" href="#taSection">Team Article</div>
-                        </div>
-                        <div className={`mn-section-decs ${
-                            visibleSection === "msSection" ? "active" : ""
-                            }`}>
-                            <div className="mn-left-title" href="#msSection">Epic Milestones</div>
-                        </div>
-                        <div className={`mn-section-decs ${
-                            visibleSection === "emSection" ? "active" : ""
-                            }`}>
-                            <div className="mn-left-title" href="#emSection">Extra Miler</div>
-                        </div>
-                        <div className={`mn-section-decs ${
-                            visibleSection === "phSection" ? "active" : ""
-                            }`}>
-                            <div className="mn-left-title" href="#phSection">Project Highlights</div>
-                        </div>
-                        <div className={`mn-section-decs ${
-                            visibleSection === "portfolioSection" ? "active" : ""
-                            }`}>
-                            <div className="mn-left-title" href="#portfolioSection">Creatives</div>
-                        </div>
-                        <div className={`mn-section-decs ${
-                            visibleSection === "icSection" ? "active" : ""
-                            }`}>
-                            <div className="mn-left-title" href="#icSection">Idea Cart</div>
-                        </div>
-                    </div>
+        <>
+            <div className={`splash ${readyToHide ? "blur-out-expand-fwd" : ""} ${hideSplash ? "hide" : ""}`}>
+                <div className={`splash-logo ${runAnimation ? "show" : ""}`}>
+                    <img src={logo} />
                 </div>
-
-                <div className="mn-center-content">
-                    <div id="homeSection" ref={homeSectionRef} className="home-section">
-                        <Home />
-                    </div>
-                    <div id="ccSection" ref={ccSectionRef} className="cc-section">
-                        <ChairmanAndCEO />
-                    </div>
-                    <div id="taSection" ref={taSectionRef} className="ta-section">
-                        <TeamArticle />
-                    </div>
-                    <div id="msSection" ref={msSectionRef} className="ms-section">
-                        <Milestone />
-                    </div>
-                    <div id="emSection" ref={emSectionRef} className="em-section">
-                        <ExtraMiler />
-                    </div>
-                    <div id="phSection" ref={phSectionRef} className="ph-section">
-                        <ProjectHighlight />
-                    </div>
-                    <div id="portfolioSection" ref={portfolioSectionRef} className="portfolio-section">
-                        <Portfolio />
-                    </div>
-                    <div id="icSection" ref={icSectionRef} className="ic-section">
-                        <IdeaCart />
-                    </div>
-                </div>
-
-                <div className={`mn-right-content ${toggleLeftMenu ? "show" : ""}`} >
-                    <div className="navigation-menu">
-                        <div className="navigation-menu-container" ref={headerRef}>
-                            <div className={`navigation-menu-item ${
+            </div>
+            <div className="main-page">
+                <Header toggle={toggleMenu} />
+                <div className="mn-container">
+                    <div className="mn-left-content">
+                        <div className="mn-section-header">
+                            <div className={`mn-section-decs ${
                                 visibleSection === "homeSection" ? "active" : ""
                                 }`}>
-                                <button
-                                    type="button"
-                                    onClick={() => {
-                                        scrollTo(homeSectionRef.current);
-                                    }}>
-                                    Home
-                                </button>
+                                <div className="mn-left-title" href="#homeSection">Home</div>
                             </div>
-                            <div className={`navigation-menu-item ${
+                            <div className={`mn-section-decs ${
                                 visibleSection === "ccSection" ? "active" : ""
                                 }`}>
-                                <button
-                                    type="button"
-
-                                    onClick={() => {
-                                        scrollTo(ccSectionRef.current);
-                                    }}>
-                                    Chairman And CEO
-                                </button>
+                                <div className="mn-left-title" href="#ccSection">Chairman And CEO Message</div>
                             </div>
-                            <div className={`navigation-menu-item ${
+                            <div className={`mn-section-decs ${
                                 visibleSection === "taSection" ? "active" : ""
                                 }`}>
-                                <button
-                                    type="button"
-                                    onClick={() => {
-                                        scrollTo(taSectionRef.current);
-                                    }}>
-                                    Team Article
-                                </button>
+                                <div className="mn-left-title" href="#taSection">Team Article</div>
                             </div>
-                            <div className={`navigation-menu-item ${
+                            <div className={`mn-section-decs ${
                                 visibleSection === "msSection" ? "active" : ""
                                 }`}>
-                                <button
-                                    type="button"
-                                    onClick={() => {
-                                        scrollTo(msSectionRef.current);
-                                    }}>
-                                    Epic Milestones
-                                </button>
+                                <div className="mn-left-title" href="#msSection">Epic Milestones</div>
                             </div>
-                            <div className={`navigation-menu-item ${
+                            <div className={`mn-section-decs ${
                                 visibleSection === "emSection" ? "active" : ""
                                 }`}>
-                                <button
-                                    type="button"
-
-                                    onClick={() => {
-                                        scrollTo(emSectionRef.current);
-                                    }}>
-                                    Extra Miler
-                                </button>
+                                <div className="mn-left-title" href="#emSection">Extra Miler</div>
                             </div>
-                            <div className={`navigation-menu-item ${
+                            <div className={`mn-section-decs ${
                                 visibleSection === "phSection" ? "active" : ""
                                 }`}>
-                                <button
-                                    type="button"
-                                    onClick={() => {
-                                        scrollTo(phSectionRef.current);
-                                    }}>
-                                    Project Highlights
-                                </button>
+                                <div className="mn-left-title" href="#phSection">Project Highlights</div>
                             </div>
-                            <div className={`navigation-menu-item ${
+                            <div className={`mn-section-decs ${
                                 visibleSection === "portfolioSection" ? "active" : ""
                                 }`}>
-                                <button
-                                    type="button"
-                                    onClick={() => {
-                                        scrollTo(portfolioSectionRef.current);
-                                    }}>
-                                    Creatives
-                                </button>
+                                <div className="mn-left-title" href="#portfolioSection">Creatives</div>
                             </div>
-                            <div className={`navigation-menu-item ${
+                            <div className={`mn-section-decs ${
                                 visibleSection === "icSection" ? "active" : ""
                                 }`}>
-                                <button
-                                    type="button"
-                                    onClick={() => {
-                                        scrollTo(icSectionRef.current);
-                                    }}>
-                                    Idea Cart
+                                <div className="mn-left-title" href="#icSection">Idea Cart</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div className="mn-center-content">
+                        <div id="homeSection" ref={homeSectionRef} className="home-section">
+                            <Home />
+                        </div>
+                        <div id="ccSection" ref={ccSectionRef} className="cc-section">
+                            <ChairmanAndCEO />
+                        </div>
+                        <div id="taSection" ref={taSectionRef} className="ta-section">
+                            <TeamArticle />
+                        </div>
+                        <div id="msSection" ref={msSectionRef} className="ms-section">
+                            <Milestone />
+                        </div>
+                        <div id="emSection" ref={emSectionRef} className="em-section">
+                            <ExtraMiler />
+                        </div>
+                        <div id="phSection" ref={phSectionRef} className="ph-section">
+                            <ProjectHighlight />
+                        </div>
+                        <div id="portfolioSection" ref={portfolioSectionRef} className="portfolio-section">
+                            <Portfolio />
+                        </div>
+                        <div id="icSection" ref={icSectionRef} className="ic-section">
+                            <IdeaCart />
+                        </div>
+                    </div>
+
+                    <div className={`mn-right-content ${toggleLeftMenu ? "show" : ""}`} >
+                        <div className="navigation-menu">
+                            <div className="navigation-menu-container" ref={headerRef}>
+                                <div className={`navigation-menu-item ${
+                                    visibleSection === "homeSection" ? "active" : ""
+                                    }`}>
+                                    <button
+                                        type="button"
+                                        onClick={() => {
+                                            scrollTo(homeSectionRef.current);
+                                        }}>
+                                        Home
                                 </button>
+                                </div>
+                                <div className={`navigation-menu-item ${
+                                    visibleSection === "ccSection" ? "active" : ""
+                                    }`}>
+                                    <button
+                                        type="button"
+
+                                        onClick={() => {
+                                            scrollTo(ccSectionRef.current);
+                                        }}>
+                                        Chairman And CEO
+                                </button>
+                                </div>
+                                <div className={`navigation-menu-item ${
+                                    visibleSection === "taSection" ? "active" : ""
+                                    }`}>
+                                    <button
+                                        type="button"
+                                        onClick={() => {
+                                            scrollTo(taSectionRef.current);
+                                        }}>
+                                        Team Article
+                                </button>
+                                </div>
+                                <div className={`navigation-menu-item ${
+                                    visibleSection === "msSection" ? "active" : ""
+                                    }`}>
+                                    <button
+                                        type="button"
+                                        onClick={() => {
+                                            scrollTo(msSectionRef.current);
+                                        }}>
+                                        Epic Milestones
+                                </button>
+                                </div>
+                                <div className={`navigation-menu-item ${
+                                    visibleSection === "emSection" ? "active" : ""
+                                    }`}>
+                                    <button
+                                        type="button"
+
+                                        onClick={() => {
+                                            scrollTo(emSectionRef.current);
+                                        }}>
+                                        Extra Miler
+                                </button>
+                                </div>
+                                <div className={`navigation-menu-item ${
+                                    visibleSection === "phSection" ? "active" : ""
+                                    }`}>
+                                    <button
+                                        type="button"
+                                        onClick={() => {
+                                            scrollTo(phSectionRef.current);
+                                        }}>
+                                        Project Highlights
+                                </button>
+                                </div>
+                                <div className={`navigation-menu-item ${
+                                    visibleSection === "portfolioSection" ? "active" : ""
+                                    }`}>
+                                    <button
+                                        type="button"
+                                        onClick={() => {
+                                            scrollTo(portfolioSectionRef.current);
+                                        }}>
+                                        Creatives
+                                </button>
+                                </div>
+                                <div className={`navigation-menu-item ${
+                                    visibleSection === "icSection" ? "active" : ""
+                                    }`}>
+                                    <button
+                                        type="button"
+                                        onClick={() => {
+                                            scrollTo(icSectionRef.current);
+                                        }}>
+                                        Idea Cart
+                                </button>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
+        </>
     )
 }
 
