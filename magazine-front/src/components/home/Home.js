@@ -35,17 +35,29 @@ export default class Home extends Component {
                         <Slide {...properties}>
                             <div className="each-slide">
                                 <div className="slide-image-container" style={{ 'backgroundImage': `url(${slideImages[0]})` }}>
-                                    <span>Slide 1</span>
+                                    <div className="title-container">
+                                        <div className='slidet-title1'>Making History at DFCC</div>
+                                        <div className='slidet-title2'>1st CMS in the nation</div>
+                                        <div className='slidet-title3'>Build by YOU</div>
+                                    </div>
                                 </div>
                             </div>
                             <div className="each-slide">
                                 <div className="slide-image-container" style={{ 'backgroundImage': `url(${slideImages[1]})` }}>
-                                    <span>Slide 2</span>
+                                    <div className="title-container">
+                                        <div className='slidet-title1'>Making History at DFCC</div>
+                                        <div className='slidet-title2'>1st CMS in the nation</div>
+                                        <div className='slidet-title3'>Build by YOU</div>
+                                    </div>
                                 </div>
                             </div>
                             <div className="each-slide">
                                 <div className="slide-image-container" style={{ 'backgroundImage': `url(${slideImages[2]})` }}>
-                                    <span>Slide 3</span>
+                                    <div className="title-container">
+                                        <div className='slidet-title1'>Making History at DFCC</div>
+                                        <div className='slidet-title2'>1st CMS in the nation</div>
+                                        <div className='slidet-title3'>Build by YOU</div>
+                                    </div>
                                 </div>
                             </div>
                         </Slide>

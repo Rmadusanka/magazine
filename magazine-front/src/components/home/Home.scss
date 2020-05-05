@@ -1,16 +1,73 @@
 .home-page {
     min-height: 100vh;
 
-    .react-slideshow-container {
-        height: 300px;
-    }
-
-    .react-slideshow-wrapper {
-        height: 300px;
-        .images-wrap {
+    .slide-container {
+        .react-slideshow-container {
             height: 300px;
-            .slide-image-container {
+            .nav {
+                background: rgba(255, 255, 255, 0);
+                span {
+                    border-width: 1px;
+                    width: 12px;
+                    height: 12px;
+                    border-color: #ffffff;
+                    transition: 0.3s;
+                    transform: rotate(45deg) scale(1);
+                }
+
+                &:hover {
+                    // background: rgba(255, 255, 255, .1);
+                    span {
+                        transform: rotate(45deg) scale(1.5);
+                    }
+                }
+            }
+        }
+
+        .react-slideshow-container + div.indicators > div {
+            background: #cccccc;
+            width: 10px;
+            height: 10px;
+        }
+
+        .react-slideshow-container + div.indicators > div.active {
+            background: #0387da;
+            width: 12px;
+            height: 12px;
+        }
+
+        .react-slideshow-wrapper {
+            height: 300px;
+            .images-wrap {
                 height: 300px;
+                .slide-image-container {
+                    position: relative;
+                    height: 300px;
+                    background-position: center;
+                    .title-container {
+                        position: absolute;
+                        bottom: 12px;
+                        left: 12px;
+                        line-height: 1.25;
+                        .slidet-title1 {
+                            color: white;
+                            font-size: 16px;
+                            font-family: rFont;
+                        }
+
+                        .slidet-title2 {
+                            color: white;
+                            font-size: 24px;
+                            font-family: mFont;
+                        }
+
+                        .slidet-title3 {
+                            color: #0387DA;
+                            font-size: 20px;
+                            font-family: bFont;
+                        }
+                    }
+                }
             }
         }
     }
