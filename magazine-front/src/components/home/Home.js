@@ -9,7 +9,7 @@ import image1 from '../../assets/images/home/slider/1.png';
 
 // images
 import chairman from '../../assets/images/home/chairman.png';
-
+import ceo from '../../assets/images/home/ceo.png';
 
 const slideImages = [
     image1,
@@ -87,7 +87,7 @@ export default class Home extends Component {
                                 </div>
                             </div>
                             <div className="image-content">
-                                <img src={chairman} />
+                                <img src={ceo} />
                             </div>
                         </div>
                     </div>
