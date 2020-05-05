@@ -1,3 +1,17 @@
 .home-page {
     min-height: 100vh;
+
+    .react-slideshow-container {
+        height: 300px;
+    }
+
+    .react-slideshow-wrapper {
+        height: 300px;
+        .images-wrap {
+            height: 300px;
+            .slide-image-container {
+                height: 300px;
+            }
+        }
+    }
 }
