@@ -5,7 +5,11 @@ import { Slide } from 'react-slideshow-image';
 import './Home.scss';
 
 // Slide images
-import image1 from '../../assets/images/carousel/1.png';
+import image1 from '../../assets/images/home/slider/1.png';
+
+// images
+import chairman from '../../assets/images/home/chairman.png';
+
 
 const slideImages = [
     image1,
@@ -61,6 +65,31 @@ export default class Home extends Component {
                                 </div>
                             </div>
                         </Slide>
+                    </div>
+
+                    <div className="db-messages">
+                        <div className="db-message-content">
+                            <div className="text-content">
+                                <div className="title">
+                                    Message from <br />
+                                    Chairman
+                                </div>
+                            </div>
+                            <div className="image-content">
+                                <img src={chairman} />
+                            </div>
+                        </div>
+                        <div className="db-message-content">
+                            <div className="text-content">
+                                <div className="title">
+                                    Message from <br />
+                                    CEO
+                                </div>
+                            </div>
+                            <div className="image-content">
+                                <img src={chairman} />
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

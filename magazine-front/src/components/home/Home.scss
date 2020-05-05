@@ -1,6 +1,9 @@
+@import "src/assets/scss/variables.scss";
+
 .home-page {
     min-height: 100vh;
 
+    // Slider styles start
     .slide-container {
         .react-slideshow-container {
             height: 300px;
@@ -16,7 +19,6 @@
                 }
 
                 &:hover {
-                    // background: rgba(255, 255, 255, .1);
                     span {
                         transform: rotate(45deg) scale(1.5);
                     }
@@ -26,14 +28,16 @@
 
         .react-slideshow-container + div.indicators > div {
             background: #ffffff;
-            width: 10px;
-            height: 10px;
+            width: 12px;
+            height: 12px;
+            border: 2px solid #1e1e1e;
         }
 
         .react-slideshow-container + div.indicators > div.active {
             background: #0387da;
             width: 12px;
             height: 12px;
+            border: 2px solid #0387da;
         }
 
         .react-slideshow-wrapper {
@@ -62,7 +66,7 @@
                         }
 
                         .slidet-title3 {
-                            color: #0387DA;
+                            color: #0387da;
                             font-size: 20px;
                             font-family: bFont;
                         }
@@ -71,4 +75,66 @@
             }
         }
     }
+    // Slider styles end
+
+    // Director board messages style start
+    .db-messages {
+        margin: 12px 0;
+        .db-message-content {
+            width: calc(50% - 12px);
+            background: #2e2e2e;
+            display: inline-block;
+            margin-bottom: 12px;
+
+            @include mq("phablet", max) {
+                width: 100%;
+            }
+
+            &:first-child {
+                float: left;
+            }
+
+            &:last-child {
+                float: right;
+            }
+
+            .text-content {
+                width: calc(100% - 120px - 12px);
+                padding: 12px;
+                float: left;
+                @include mq("desktop", max) {
+                    width: calc(100% - 90px - 12px);
+                }
+                .title {
+                    font-family: mFont;
+                    color: #ffffff;
+                    font-size: 22px;
+                    @include mq("desktop", max) {
+                        font-size: 16px;
+                    }
+                }
+            }
+            .image-content {
+                float: left;
+                width: 120px;
+                height: 90px;
+                overflow: hidden;
+
+                @include mq("desktop", max) {
+                    width: 90px;
+                    height: 72px;
+                }
+
+                img {
+                    width: 120px;
+                    height: 90px;
+                    @include mq("desktop", max) {
+                        width: 90px;
+                        height: 72px;
+                    }
+                }
+            }
+        }
+    }
+    // Director board messages style end
 }
