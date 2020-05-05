@@ -137,4 +137,47 @@
         }
     }
     // Director board messages style end
+
+    // Highlights style start
+    .highlights {
+        .hl-title {
+        }
+
+        .scrolling-wrapper {
+            overflow-x: scroll;
+            overflow-y: hidden;
+            white-space: nowrap;
+            -webkit-overflow-scrolling: touch;
+
+            &::-webkit-scrollbar {
+                display: none;
+            }
+
+            .hl-card {
+                width: 200px;
+                display: inline-block;
+            }
+        }
+
+        .menu-item {
+            padding: 0 40px;
+            margin: 5px 10px;
+            user-select: none;
+            cursor: pointer;
+            border: none;
+        }
+        .menu-item-wrapper.active {
+            border: 1px blue solid;
+        }
+        .menu-item.active {
+            border: 1px green solid;
+        }
+
+        .scroll-menu-arrow {
+            padding: 20px;
+            cursor: pointer;
+        }
+    }
+
+    // Highlights style end
 }
