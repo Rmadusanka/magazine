@@ -16,6 +16,7 @@ import Milestone from '../milestone/Milestone';
 
 // Images
 import logo from '../../assets/images/color-logo-white-background.svg';
+import closeMenu from '../../assets/images/icons/close.svg';
 
 const getDimensions = ele => {
     const { height } = ele.getBoundingClientRect();
@@ -213,6 +214,11 @@ function Main() {
                     </div>
 
                     <div className={`mn-right-content ${toggleLeftMenu ? "show" : ""}`} >
+                        <div className="menu-header-actions">
+                            <button onClick={toggleMenu}>
+                                <img src={closeMenu} />
+                            </button>
+                        </div>
                         <div className="navigation-menu">
                             <div className="navigation-menu-container" ref={headerRef}>
                                 <div className={`navigation-menu-item ${
