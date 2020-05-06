@@ -7,7 +7,10 @@ export default class TeamArticle extends Component {
         return (
             <div className="team-article-page">
                 <div className="top-spacer"></div>
-                TeamArticle
+                <div className="page-container">
+                    <div className="page-title">{this.props.pageTitle}</div>
+
+                </div>
             </div>
         )
     }

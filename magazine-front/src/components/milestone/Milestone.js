@@ -7,7 +7,10 @@ export default class Milestone extends Component {
         return (
             <div className="milestone-page">
                 <div className="top-spacer"></div>
-                Milestone
+                <div className="page-container">
+                    <div className="page-title">{this.props.pageTitle}</div>
+
+                </div>
             </div>
         )
     }

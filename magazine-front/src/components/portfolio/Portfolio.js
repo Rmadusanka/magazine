@@ -7,7 +7,10 @@ export default class Portfolio extends Component {
         return (
             <div className="porfolio-page" >
                 <div className="top-spacer"></div>
-                Portfolio
+                <div className="page-container">
+                    <div className="page-title">{this.props.pageTitle}</div>
+
+                </div>
             </div>
         )
     }

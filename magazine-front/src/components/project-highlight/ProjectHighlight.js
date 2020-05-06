@@ -7,7 +7,10 @@ export default class ProjectHighlight extends Component {
         return (
             <div className="project-highlight-page">
                 <div className="top-spacer"></div>
-                Project Highlight
+                <div className="page-container">
+                    <div className="page-title">{this.props.pageTitle}</div>
+
+                </div>
             </div>
         )
     }

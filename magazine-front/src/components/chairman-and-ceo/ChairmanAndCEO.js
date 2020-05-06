@@ -8,8 +8,8 @@ export default class ChairmanAndCEO extends Component {
             <div className="cc-message-page">
                 <div className="top-spacer"></div>
                 <div className="page-container">
-                    <div className="page-title">Home</div>
-                    
+                    <div className="page-title">{this.props.pageTitle}</div>
+
                 </div>
             </div >
         )

@@ -97,7 +97,7 @@ export default class Home extends Component {
             <div className="home-page">
                 <div className="top-spacer"></div>
                 <div className="page-container">
-                    <div className="page-title">Home</div>
+                    <div className="page-title">{this.props.pageTitle}</div>
                     {/* Slider start */}
                     <div className="slide-container">
                         <Slide {...properties}>
