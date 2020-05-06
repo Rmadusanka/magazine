@@ -80,6 +80,8 @@
     // Director board messages style start
     .db-messages {
         margin: 12px 0;
+        display: inline-block;
+        width: 100%;
         .db-message-content {
             width: calc(50% - 12px);
             background: #2e2e2e;
@@ -141,6 +143,14 @@
     // Highlights style start
     .highlights {
         .hl-title {
+            margin: 12px 0;
+            border-bottom: 1px solid #444444;
+            span {
+                font-size: 20px;
+                font-family: mFont;
+                color: white;
+                border-bottom: 3px solid #0074BC;
+            }
         }
 
         .scrolling-wrapper {
