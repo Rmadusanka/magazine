@@ -77,6 +77,26 @@
                         padding: 0 12px;
                         line-height: 1.4;
                     }
+
+                    .project-list {
+                        padding: 32px 16px;
+                        .project-link {
+                            margin-bottom: 4px;
+                            padding: 4px 0;
+                            font-family: rFont;
+                            color: #5c5c5c;
+                            font-size: 16px;
+                            transition: 0.2s;
+                            cursor: pointer;
+                            &:hover {
+                                color: #ffffff;
+                            }
+
+                            &:active {
+                                transform: scale(1.2);
+                            }
+                        }
+                    }
                 }
             }
         }
@@ -172,6 +192,7 @@
                             padding-right: 12px;
                             margin-bottom: 16px;
                             outline: none;
+                            transition: .2s;
 
                             &::before {
                                 position: absolute;
@@ -182,6 +203,18 @@
                                 height: 2px;
                                 border-radius: 8px;
                                 background: #c4c4c4;
+                                transform: scale(1);
+                                transition: .2s;
+                            }
+
+                            &:hover {
+                                color: #cccccc;
+                            }
+
+                            &:active {
+                                &::before {
+                                    transform: scale(8);
+                                }
                             }
                         }
 

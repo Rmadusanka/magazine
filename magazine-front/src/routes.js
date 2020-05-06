@@ -5,6 +5,7 @@ import { Redirect } from "react-router-dom";
 import Main from "./components/main/Main";
 import Portfolio from "./components/portfolio/Portfolio";
 import Page404 from "./components/common/page404/Page404";
+import ChairmanAndCEO from './components/chairman-and-ceo/ChairmanAndCEO';
 
 export default [
     {
@@ -19,6 +20,10 @@ export default [
     {
         path: "/portfolio",
         component: Portfolio
+    },
+    {
+        path: "/chairman-and-ceo",
+        component: ChairmanAndCEO
     },
     {
         component: Page404

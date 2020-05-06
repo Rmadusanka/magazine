@@ -151,18 +151,18 @@ export default class Home extends Component {
 
                     {/* Directer board message start */}
                     <div className="db-messages">
-                        <div className="db-message-content">
+                        <div className="db-message-content" onClick={() => (window.location="/chairman-and-ceo")}>
                             <div className="text-content">
                                 <div className="title">
                                     Message from <br />
-                                    Chairman
+                                    Chairman    
                                 </div>
                             </div>
                             <div className="image-content">
                                 <img src={chairman} />
                             </div>
                         </div>
-                        <div className="db-message-content">
+                        <div className="db-message-content" onClick={() => (window.location="/chairman-and-ceo")}>
                             <div className="text-content">
                                 <div className="title">
                                     Message from <br />

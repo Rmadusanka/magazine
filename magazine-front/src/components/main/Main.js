@@ -169,6 +169,16 @@ function Main() {
                                 visibleSection === "phSection" ? "active" : ""
                                 }`}>
                                 <div className="mn-left-title" href="#phSection">{titleList.projectHighlights}</div>
+
+                                <div className="project-list">
+                                    <div className="project-link">Finex</div>
+                                    <div className="project-link">NDB Neos</div>
+                                    <div className="project-link">BOC Smart Pay</div>
+                                    <div className="project-link">Dialog Finance</div>
+                                    <div className="project-link">FriMe</div>
+                                    <div className="project-link">Insure Teach</div>
+                                </div>
+
                             </div>
                             <div className={`mn-section-decs ${
                                 visibleSection === "portfolioSection" ? "active" : ""
