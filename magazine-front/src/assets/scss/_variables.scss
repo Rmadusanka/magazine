@@ -1,12 +1,39 @@
 // color variables
-$primaryColor: #444444;
-$secondaryColor: #0387da;
+//new by Amith
+$grayColor1: #464646;
+$grayColor2: #444444;// $primaryColor
+$darkGrayColor: #2F2F2F;
+$blackGrayColor: #1E1E1E;
+$lightGray1Color: #999999; 
+$lightGray2Color: #C4C4C4; 
+$lightGray3Color: #DBDBDB; 
+$whiteColor: #FFFFFF;
+$transparentGrayColor: rgba(0, 0, 0, 0.4);
+$transparentLightGrayColor: rgba(153, 153, 153, 0.5);
+$transparentInputBoxColor: rgba(245, 245, 245, 0.1);
+$transparentRedColor: rgba(251, 51, 51, 0.87);
+$IdeaCartYellowColor: #FFD15C; 
+$skyBluColor: #0387DA;// $secondaryColor
+$rainbowBlueColor: #0AAFD1;
+$rainbowRedColor: #FB3333;
+$rainbowOrangeColor: #FF5C00;
+$rainbowYellowColor: #F0AD00;
+$rainbowGreenColor: #9ECE65;
 
 // $lightPrimaryColor:
 // $lightSecondaryColor:
+//new by Amith
+$textGrayColor: #464646;
+$textDarkGrayColor: #2F2F2F;//$textPrimaryColor: #272727;
+$textLightGray2Color: #C4C4C4;//$textSecondaryColor: #555555;
+$textWhiteColor: #FFFFFF;
+$textSkyBluColor: #0387DA;
+$textRainbowBlueColor: #0AAFD1;
+$textRainbowRedColor: #FB3333;
+$textRainbowOrangeColor: #FF5C00;
+$textRainbowYellowColor: #F0AD00;
+//$textRainbowGreenColor: #9ECE65; //not used yet
 
-$textPrimaryColor: #272727;
-$textSecondaryColor: #555555;
 
 // Font sizes
 $textLarge: 16px;
