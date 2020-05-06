@@ -36,6 +36,17 @@ const scrollTo = ele => {
     });
 };
 
+const titleList = {
+    home: "Home",
+    chairmanAndCEO: "Chairman And CEO",
+    teamArticles: "Team Articles",
+    milestone: "Epic Milestone",
+    extraMiler: "Extra Miler",
+    projectHighlights: "Project Highlights",
+    creatives: "Creatives",
+    ideaCart: "Idea Cart",
+};
+
 // let toggleHamburgerMenu = true;
 
 // function toggleMenu() {
@@ -44,6 +55,7 @@ const scrollTo = ele => {
 // }
 
 function Main() {
+
 
     const [visibleSection, setVisibleSection] = useState();
     let [toggleLeftMenu, setToggleLeftMenu] = useState(false);
@@ -133,70 +145,70 @@ function Main() {
                             <div className={`mn-section-decs ${
                                 visibleSection === "homeSection" ? "active" : ""
                                 }`}>
-                                <div className="mn-left-title" href="#homeSection">Home</div>
+                                <div className="mn-left-title" href="#homeSection">{titleList.home}</div>
                             </div>
                             <div className={`mn-section-decs ${
                                 visibleSection === "ccSection" ? "active" : ""
                                 }`}>
-                                <div className="mn-left-title" href="#ccSection">Chairman And CEO Message</div>
+                                <div className="mn-left-title" href="#ccSection">{titleList.chairmanAndCEO}</div>
                             </div>
                             <div className={`mn-section-decs ${
                                 visibleSection === "taSection" ? "active" : ""
                                 }`}>
-                                <div className="mn-left-title" href="#taSection">Team Article</div>
+                                <div className="mn-left-title" href="#taSection">{titleList.teamArticles}</div>
                             </div>
                             <div className={`mn-section-decs ${
                                 visibleSection === "msSection" ? "active" : ""
                                 }`}>
-                                <div className="mn-left-title" href="#msSection">Epic Milestones</div>
+                                <div className="mn-left-title" href="#msSection">{titleList.milestone}</div>
                             </div>
                             <div className={`mn-section-decs ${
                                 visibleSection === "emSection" ? "active" : ""
                                 }`}>
-                                <div className="mn-left-title" href="#emSection">Extra Miler</div>
+                                <div className="mn-left-title" href="#emSection">{titleList.extraMiler}</div>
                             </div>
                             <div className={`mn-section-decs ${
                                 visibleSection === "phSection" ? "active" : ""
                                 }`}>
-                                <div className="mn-left-title" href="#phSection">Project Highlights</div>
+                                <div className="mn-left-title" href="#phSection">{titleList.projectHighlights}</div>
                             </div>
                             <div className={`mn-section-decs ${
                                 visibleSection === "portfolioSection" ? "active" : ""
                                 }`}>
-                                <div className="mn-left-title" href="#portfolioSection">Creatives</div>
+                                <div className="mn-left-title" href="#portfolioSection">{titleList.creatives}</div>
                             </div>
                             <div className={`mn-section-decs ${
                                 visibleSection === "icSection" ? "active" : ""
                                 }`}>
-                                <div className="mn-left-title" href="#icSection">Idea Cart</div>
+                                <div className="mn-left-title" href="#icSection">{titleList.ideaCart}</div>
                             </div>
                         </div>
                     </div>
 
                     <div className="mn-center-content">
                         <div id="homeSection" ref={homeSectionRef} className="home-section">
-                            <Home />
+                            <Home pageTitle={titleList.home} />
                         </div>
                         <div id="ccSection" ref={ccSectionRef} className="cc-section">
-                            <ChairmanAndCEO />
+                            <ChairmanAndCEO pageTitle={titleList.chairmanAndCEO} />
                         </div>
                         <div id="taSection" ref={taSectionRef} className="ta-section">
-                            <TeamArticle />
+                            <TeamArticle pageTitle={titleList.teamArticles} />
                         </div>
                         <div id="msSection" ref={msSectionRef} className="ms-section">
-                            <Milestone />
+                            <Milestone pageTitle={titleList.milestone} />
                         </div>
                         <div id="emSection" ref={emSectionRef} className="em-section">
-                            <ExtraMiler />
+                            <ExtraMiler pageTitle={titleList.extraMiler} />
                         </div>
                         <div id="phSection" ref={phSectionRef} className="ph-section">
-                            <ProjectHighlight />
+                            <ProjectHighlight pageTitle={titleList.projectHighlights} />
                         </div>
                         <div id="portfolioSection" ref={portfolioSectionRef} className="portfolio-section">
-                            <Portfolio />
+                            <Portfolio pageTitle={titleList.creatives} />
                         </div>
                         <div id="icSection" ref={icSectionRef} className="ic-section">
-                            <IdeaCart />
+                            <IdeaCart pageTitle={titleList.ideaCart} />
                         </div>
                     </div>
 
@@ -211,7 +223,7 @@ function Main() {
                                         onClick={() => {
                                             scrollTo(homeSectionRef.current);
                                         }}>
-                                        Home
+                                        {titleList.home}
                                 </button>
                                 </div>
                                 <div className={`navigation-menu-item ${
@@ -223,7 +235,7 @@ function Main() {
                                         onClick={() => {
                                             scrollTo(ccSectionRef.current);
                                         }}>
-                                        Chairman And CEO
+                                        {titleList.chairmanAndCEO}
                                 </button>
                                 </div>
                                 <div className={`navigation-menu-item ${
@@ -234,7 +246,7 @@ function Main() {
                                         onClick={() => {
                                             scrollTo(taSectionRef.current);
                                         }}>
-                                        Team Article
+                                        {titleList.teamArticles}
                                 </button>
                                 </div>
                                 <div className={`navigation-menu-item ${
@@ -245,7 +257,7 @@ function Main() {
                                         onClick={() => {
                                             scrollTo(msSectionRef.current);
                                         }}>
-                                        Epic Milestones
+                                        {titleList.milestone}
                                 </button>
                                 </div>
                                 <div className={`navigation-menu-item ${
@@ -257,7 +269,7 @@ function Main() {
                                         onClick={() => {
                                             scrollTo(emSectionRef.current);
                                         }}>
-                                        Extra Miler
+                                        {titleList.extraMiler}
                                 </button>
                                 </div>
                                 <div className={`navigation-menu-item ${
@@ -268,7 +280,7 @@ function Main() {
                                         onClick={() => {
                                             scrollTo(phSectionRef.current);
                                         }}>
-                                        Project Highlights
+                                        {titleList.projectHighlights}
                                 </button>
                                 </div>
                                 <div className={`navigation-menu-item ${
@@ -279,7 +291,7 @@ function Main() {
                                         onClick={() => {
                                             scrollTo(portfolioSectionRef.current);
                                         }}>
-                                        Creatives
+                                        {titleList.creatives}
                                 </button>
                                 </div>
                                 <div className={`navigation-menu-item ${
@@ -290,7 +302,7 @@ function Main() {
                                         onClick={() => {
                                             scrollTo(icSectionRef.current);
                                         }}>
-                                        Idea Cart
+                                        {titleList.ideaCart}
                                 </button>
                                 </div>
                             </div>

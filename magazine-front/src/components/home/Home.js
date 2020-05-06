@@ -39,9 +39,6 @@ const list = [
     { name: 'item4' },
     { name: 'item5' },
     { name: 'item6' },
-    { name: 'item7' },
-    { name: 'item8' },
-    { name: 'item9' }
 ];
 
 // One item component
@@ -100,7 +97,7 @@ export default class Home extends Component {
             <div className="home-page">
                 <div className="top-spacer"></div>
                 <div className="page-container">
-
+                    <div className="page-title">Home</div>
                     {/* Slider start */}
                     <div className="slide-container">
                         <Slide {...properties}>

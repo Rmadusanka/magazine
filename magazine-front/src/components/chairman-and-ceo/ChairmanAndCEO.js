@@ -7,8 +7,11 @@ export default class ChairmanAndCEO extends Component {
         return (
             <div className="cc-message-page">
                 <div className="top-spacer"></div>
-                ChairmanAndCEO
-            </div>
+                <div className="page-container">
+                    <div className="page-title">Home</div>
+                    
+                </div>
+            </div >
         )
     }
 }
