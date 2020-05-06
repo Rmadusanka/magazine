@@ -149,38 +149,58 @@
                 font-size: 20px;
                 font-family: mFont;
                 color: white;
-                border-bottom: 3px solid #0074BC;
+                border-bottom: 3px solid #0074bc;
             }
         }
 
         .scrolling-wrapper {
-            overflow-x: scroll;
-            overflow-y: hidden;
-            white-space: nowrap;
-            -webkit-overflow-scrolling: touch;
-
-            &::-webkit-scrollbar {
-                display: none;
-            }
-
-            .hl-card {
-                width: 200px;
-                display: inline-block;
-            }
+            margin-top: 24px;
         }
 
         .menu-item {
-            padding: 0 40px;
-            margin: 5px 10px;
+            width: 300px;
+            margin: 0;
             user-select: none;
             cursor: pointer;
             border: none;
+            .hl-card-image-container {
+                img {
+                    width: 300px;
+                }
+            }
+
+            .hl-card-title {
+                font-size: 16px;
+                font-family: mFont;
+                color: #ffffff;
+                margin: 8px 0;
+            }
+
+            .hl-card-description {
+                word-break: break-word;
+                width: 300px;
+                overflow-wrap: break-word;
+                white-space: normal;
+                color: #ffffff;
+                font-family: lFont;
+                font-size: 12px;
+            }
         }
-        .menu-item-wrapper.active {
-            border: 1px blue solid;
+        .menu-item-wrapper {
+            width: 300px;
+            margin-right: 12px;
+            border: 1px solid transparent;
+            outline: none;
+            &:last-child {
+                margin-right: 0;
+            }
+
+            &.active {
+                // border: 0.5px solid #444444;
+            }
         }
         .menu-item.active {
-            border: 1px green solid;
+            border: 0.5px solid #444444;
         }
 
         .scroll-menu-arrow {

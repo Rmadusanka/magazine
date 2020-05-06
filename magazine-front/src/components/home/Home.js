@@ -33,35 +33,52 @@ const properties = {
 // Horizontal scroll Item things start
 // list of items
 const list = [
-    { name: 'item1' },
-    { name: 'item2' },
-    { name: 'item3' },
-    { name: 'item4' },
-    { name: 'item5' },
-    { name: 'item6' },
+    {
+        title: 'Award Winning Products',
+        imageUrl: image1,
+        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi ultrices nulla sed mi ornare malesuada.'
+    },
+    {
+        title: 'Womens Day 2020',
+        imageUrl: image1,
+        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi ultrices nulla sed mi ornare malesuada.'
+    },
+    {
+        title: 'Badminton Tournament',
+        imageUrl: image1,
+        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi ultrices nulla sed mi ornare malesuada.'
+    }
 ];
 
 // One item component
 // selected prop will be passed
-const MenuItem = ({ text, selected }) => {
+const CardItem = ({ text, imageUrl, description, selected }) => {
     return (
-        <div
-            className="menu-item"
-        >
-            {text}
+        <div className="menu-item">
+            <div className='hl-card-image-container'>
+                <img src={imageUrl} draggable="false" />
+            </div>
+            <div className="hl-card-title">
+                {text}
+            </div>
+            <div className="hl-card-description">
+                {description}
+            </div>
         </div>
     );
 };
 
 // All items component
 // Important! add unique key
-export const Menu = (list) => list.map(el => {
-    const { name } = el;
+export const CardContainer = (list) => list.map(el => {
+    const { title, imageUrl, description } = el;
 
     return (
-        <MenuItem
-            text={name}
-            key={name}
+        <CardItem
+            text={title}
+            imageUrl={imageUrl}
+            description={description}
+            key={title}
         />
     );
 });
@@ -91,7 +108,7 @@ export default class Home extends Component {
     render() {
         const { selected } = this.state;
         // Create menu from items
-        const menu = Menu(list, selected);
+        const card = CardContainer(list, selected);
 
         return (
             <div className="home-page">
@@ -167,11 +184,13 @@ export default class Home extends Component {
 
                         <div className="scrolling-wrapper">
                             <ScrollMenu
-                                data={menu}
-                                arrowLeft={ArrowLeft}
-                                arrowRight={ArrowRight}
+                                alignCenter={false}
+                                data={card}
                                 selected={selected}
                                 onSelect={this.onSelect}
+                                scrollBy= {0}
+                                hideArrows = {true}
+                                translate = {0}
                             />
                         </div>
 
