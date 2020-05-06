@@ -83,7 +83,7 @@
         display: inline-block;
         width: 100%;
         .db-message-content {
-            width: calc(50% - 12px);
+            width: calc(50% - 8px);
             background: #2e2e2e;
             display: inline-block;
             margin-bottom: 12px;
@@ -188,7 +188,7 @@
         }
         .menu-item-wrapper {
             width: 300px;
-            margin-right: 12px;
+            margin-right: 16px;
             border: 1px solid transparent;
             outline: none;
             &:last-child {
