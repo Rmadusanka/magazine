@@ -39,7 +39,6 @@ const scrollTo = ele => {
 
 const titleList = {
     home: "Home",
-    chairmanAndCEO: "Chairman And CEO",
     teamArticles: "Team Articles",
     milestone: "Epic Milestone",
     extraMiler: "Extra Miler",
@@ -68,7 +67,6 @@ function Main() {
 
     const headerRef = useRef(null);
     const homeSectionRef = useRef(null);
-    const ccSectionRef = useRef(null);
     const taSectionRef = useRef(null);
     const msSectionRef = useRef(null);
     const emSectionRef = useRef(null);
@@ -78,7 +76,6 @@ function Main() {
 
     const sectionRefs = [
         { section: "homeSection", ref: homeSectionRef },
-        { section: "ccSection", ref: ccSectionRef },
         { section: "taSection", ref: taSectionRef },
         { section: "msSection", ref: msSectionRef },
         { section: "emSection", ref: emSectionRef },
@@ -190,9 +187,6 @@ function Main() {
                         <div id="homeSection" ref={homeSectionRef} className="home-section">
                             <Home pageTitle={titleList.home} />
                         </div>
-                        <div id="ccSection" ref={ccSectionRef} className="cc-section">
-                            <ChairmanAndCEO pageTitle={titleList.chairmanAndCEO} />
-                        </div>
                         <div id="taSection" ref={taSectionRef} className="ta-section">
                             <TeamArticle pageTitle={titleList.teamArticles} />
                         </div>
@@ -230,18 +224,6 @@ function Main() {
                                             scrollTo(homeSectionRef.current);
                                         }}>
                                         {titleList.home}
-                                </button>
-                                </div>
-                                <div className={`navigation-menu-item ${
-                                    visibleSection === "ccSection" ? "active" : ""
-                                    }`}>
-                                    <button
-                                        type="button"
-
-                                        onClick={() => {
-                                            scrollTo(ccSectionRef.current);
-                                        }}>
-                                        {titleList.chairmanAndCEO}
                                 </button>
                                 </div>
                                 <div className={`navigation-menu-item ${
