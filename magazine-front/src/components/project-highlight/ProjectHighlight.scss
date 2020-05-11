@@ -1,3 +1,56 @@
 .project-highlight-page {
     min-height: 100vh;
+
+    .page-container {
+        .project-highlights-container {
+            padding-top: 48px;
+            .scrolling-wrapper {
+                .menu-item-wrapper {
+                    margin-right: 64px;
+                    padding: 24px;
+                    .menu-item {
+                        border: 1px solid #444444;
+                        .item-container {
+                            position: relative;
+                            margin: 12px;
+                            .text-content {
+                                position: absolute;
+                                .ph-card-description {
+                                    font-family: rFont;
+                                    font-size: 16px;
+                                    color: #ffffff;
+                                }
+
+                                .ph-card-title {
+                                    font-family: mFont;
+                                    font-size: 24px;
+                                }
+                                
+                            }
+                        }
+                    }
+
+                    &:nth-child(even) {
+                        .menu-item {
+                            transform: translateY(24px);
+                            .text-content {
+                                top: 48px;
+                                left: -36px
+                            }
+                        }
+                    }
+
+                    &:nth-child(odd) {
+                        .menu-item {
+                            transform: translateY(-24px);
+                            .text-content {
+                                bottom: 48px;
+                                left: -36px
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
