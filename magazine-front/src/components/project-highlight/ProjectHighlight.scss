@@ -1,3 +1,5 @@
+@import "src/assets/scss/variables.scss";
+
 .project-highlight-page {
     min-height: 100vh;
 
@@ -5,14 +7,50 @@
         .project-highlights-container {
             padding-top: 48px;
             .scrolling-wrapper {
+                .menu-wrapper {
+                    transform: scale(1);
+                    transition: 0.3s;
+                    &:active {
+                        transform: scale(0.9);
+                    }
+                }
                 .menu-item-wrapper {
                     margin-right: 64px;
                     padding: 24px;
+                    outline: none;
+                    cursor: pointer;
+
                     .menu-item {
                         border: 1px solid #444444;
                         .item-container {
                             position: relative;
                             margin: 12px;
+
+                            .ph-card-image-container {
+                                transform: scale(1);
+
+                                // &:active {
+                                //     transform: scale(1.05);
+                                // }
+
+                                img {
+                                    -webkit-filter: grayscale(100%);
+                                    filter: grayscale(100%);
+                                    -webkit-transition: 0.3s ease-in-out;
+                                    transition: 0.3s ease-in-out;
+                                }
+                            }
+
+                            &:hover {
+                                .ph-card-image-container {
+
+                                    img {
+                                        -webkit-filter: grayscale(0);
+                                        filter: grayscale(0);
+                                    }
+                                }
+                            }
+
                             .text-content {
                                 position: absolute;
                                 .ph-card-description {
@@ -22,10 +60,9 @@
                                 }
 
                                 .ph-card-title {
-                                    font-family: mFont;
+                                    font-family: bFont;
                                     font-size: 24px;
                                 }
-                                
                             }
                         }
                     }
@@ -33,9 +70,24 @@
                     &:nth-child(even) {
                         .menu-item {
                             transform: translateY(24px);
+                            position: relative;
+                            .item-container {
+                                &::before {
+                                    content: "";
+                                    position: absolute;
+                                    left: 0;
+                                    top: 0;
+                                    width: 100%;
+                                    height: 100%;
+                                    background: linear-gradient(180deg, #000000 0%, rgba(0, 0, 0, 0) 60%);
+                                    z-index: 1;
+                                }
+                            }
+
                             .text-content {
                                 top: 48px;
-                                left: -36px
+                                left: -36px;
+                                z-index: 2;
                             }
                         }
                     }
@@ -43,9 +95,86 @@
                     &:nth-child(odd) {
                         .menu-item {
                             transform: translateY(-24px);
+                            .item-container {
+                                &::before {
+                                    content: "";
+                                    position: absolute;
+                                    left: 0;
+                                    top: 0;
+                                    width: 100%;
+                                    height: 100%;
+                                    background: linear-gradient(0, #000000 0%, rgba(0, 0, 0, 0) 60%);
+                                    z-index: 1;
+                                }
+                            }
                             .text-content {
                                 bottom: 48px;
-                                left: -36px
+                                left: -36px;
+                                z-index: 2;
+                            }
+                        }
+                    }
+
+                    &:nth-child(1) {
+                        .text-content {
+                            .ph-card-title {
+                                color: $rainbowBlueColor;
+                            }
+                        }
+                    }
+
+                    &:nth-child(2) {
+                        .text-content {
+                            .ph-card-title {
+                                color: $rainbowRedColor;
+                            }
+                        }
+                    }
+
+                    &:nth-child(3) {
+                        .text-content {
+                            .ph-card-title {
+                                color: $rainbowOrangeColor;
+                            }
+                        }
+                    }
+
+                    &:nth-child(4) {
+                        .text-content {
+                            .ph-card-title {
+                                color: $rainbowYellowColor;
+                            }
+                        }
+                    }
+
+                    &:nth-child(5) {
+                        .text-content {
+                            .ph-card-title {
+                                color: $rainbowGreenColor;
+                            }
+                        }
+                    }
+
+                    &:nth-child(6) {
+                        .text-content {
+                            .ph-card-title {
+                                color: $skyBluColor;
+                            }
+                        }
+                    }
+
+                    &:nth-child(7) {
+                        .text-content {
+                            .ph-card-title {
+                                color: $IdeaCartYellowColor;
+                            }
+                        }
+                    }
+
+                    &:nth-child(8) {
+                        .text-content {
+                            .ph-card-title {
+                                color: $blackGrayColor;
                             }
                         }
                     }
@@ -54,3 +183,41 @@
         }
     }
 }
+
+// .tracking-in-expand-fwd {
+//     -webkit-animation: tracking-in-expand-fwd 0.6s cubic-bezier(0.215, 0.61, 0.355, 1) both;
+//     animation: tracking-in-expand-fwd 0.6s cubic-bezier(0.215, 0.61, 0.355, 1) both;
+// }
+
+// @-webkit-keyframes tracking-in-expand-fwd {
+//     0% {
+//         letter-spacing: -0.5em;
+//         -webkit-transform: translateZ(-700px);
+//         transform: translateZ(-700px);
+//         opacity: 0;
+//     }
+//     40% {
+//         opacity: 0.6;
+//     }
+//     100% {
+//         -webkit-transform: translateZ(0);
+//         transform: translateZ(0);
+//         opacity: 1;
+//     }
+// }
+// @keyframes tracking-in-expand-fwd {
+//     0% {
+//         letter-spacing: -0.5em;
+//         -webkit-transform: translateZ(-700px);
+//         transform: translateZ(-700px);
+//         opacity: 0;
+//     }
+//     40% {
+//         opacity: 0.6;
+//     }
+//     100% {
+//         -webkit-transform: translateZ(0);
+//         transform: translateZ(0);
+//         opacity: 1;
+//     }
+// }
