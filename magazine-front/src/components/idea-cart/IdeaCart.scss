@@ -1,3 +1,8 @@
+@import "src/assets/scss/variables.scss";
+
 .idea-cart-page {
     min-height: 100vh;
+    .idea-cart-description {
+        color: $textWhiteColor;
+    }
 }
