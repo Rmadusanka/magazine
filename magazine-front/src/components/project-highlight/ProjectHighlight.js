@@ -7,6 +7,9 @@ import './ProjectHighlight.scss';
 import image1 from '../../assets/images/project-highlights/1.png';
 import image2 from '../../assets/images/project-highlights/2.png';
 
+import leftArrow from '../../assets/images/icons/btn-back-small.svg';
+import rightArrow from '../../assets/images/icons/btn-next-large.svg';
+
 // Horizontal scroll Item things start
 // list of items
 const list = [
@@ -77,11 +80,23 @@ export const CardContainer = (list) => list.map(el => {
 
 
 const Arrow = ({ text, className }) => {
-    return (
-        <div
-            className={className}
-        >{text}</div>
-    );
+    if (text == '<') {
+        return (
+            <div
+                className={className}
+            >
+                <img src={leftArrow} />
+            </div>
+        );
+    } else {
+        return (
+            <div
+                className={className}
+            >
+                <img src={rightArrow} />
+            </div>
+        );
+    }
 };
 
 
@@ -112,14 +127,18 @@ export default class ProjectHighlight extends Component {
                     <div className="project-highlights-container">
                         <div className="scrolling-wrapper">
                             <ScrollMenu
-                                alignCenter={false}
+                                alignCenter={true}
+                                arrowLeft={ArrowLeft}
+                                arrowRight={ArrowRight}
                                 data={card}
                                 selected={selected}
                                 onSelect={this.onSelect}
                                 scrollBy={0}
-                                hideArrows={true}
+                                hideArrows={false}
+                                transition={0.6}
                                 translate={0}
                                 wheel={false}
+                                inertiaScrollingSlowdown={.8}
                             />
                         </div>
                     </div>

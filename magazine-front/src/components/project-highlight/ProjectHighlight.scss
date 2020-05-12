@@ -5,8 +5,27 @@
 
     .page-container {
         .project-highlights-container {
+            position: relative;
             padding-top: 48px;
             .scrolling-wrapper {
+                .scroll-menu-arrow {
+                    position: absolute;
+                    left: 50%;
+                    bottom: -40px;
+
+                    .arrow-next {
+                        position: absolute;
+                        left: 12px;
+                        height: 60px;
+                    }
+                    
+                    .arrow-prev {
+                        position: absolute;
+                        padding-top: 12px;
+                        right: 12px;
+                    }
+                }
+
                 .menu-wrapper {
                     transform: scale(1);
                     transition: 0.3s;
@@ -90,7 +109,7 @@
                             .text-content {
                                 position: absolute;
                                 transform: scale(1) translateX(0);
-                                transition: .3s ease-in-out;
+                                transition: 0.3s ease-in-out;
 
                                 .ph-card-description {
                                     font-family: rFont;
