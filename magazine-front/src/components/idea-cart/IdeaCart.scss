@@ -1,8 +1,45 @@
 @import "src/assets/scss/variables.scss";
-
 .idea-cart-page {
     min-height: 100vh;
-    .idea-cart-description {
-        color: $textWhiteColor;
+    align-content: center;
+    .idea-cart-section-1 {
+        width: calc(50% - 8px);
+        // background: #2e2e2e;
+        display: inline-block;
+        align-content: center;
+        margin-bottom: 12px;
+        @include mq("tablet-wide", max) {
+            width: 100%;
+            margin: 0;
+        }
+        // &:first-child {
+        //     float: left;
+        // }
+        // &:last-child {
+        //     float: right;
+        // }
+        .idea-cart-description {
+            color: $textWhiteColor;
+        }
+    }
+    .idea-cart-section-2 {
+        width: calc(50% - 8px);
+        // background: #2e2e2e;
+        display: inline-block;
+        align-content: center;
+        margin-bottom: 12px;
+        @include mq("tablet-wide", max) {
+            width: 100%;
+            margin: 0;
+        }
+        // &:first-child {
+        //     float: left;
+        // }
+        // &:last-child {
+        //     float: right;
+        // }
+        .idea-cart-description {
+            color: $textLightGray2Color;
+        }
     }
 }
