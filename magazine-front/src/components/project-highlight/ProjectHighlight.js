@@ -50,7 +50,9 @@ const CardItem = ({ text, imageUrl, description, selected }) => {
                         {description}
                     </div>
                     <div className="ph-card-title">
-                        {text}
+                        <span>
+                            {text}
+                        </span>
                     </div>
                 </div>
             </div>
