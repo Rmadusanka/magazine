@@ -51,7 +51,8 @@ export default class IdeaCart extends Component {
                   <option value="department1"> Department 1 </option>{" "}
                   <option value="department2"> Department 2 </option>{" "}
                   <option value="department3"> Department 3 </option>{" "}
-                  <option value="department4"> Department 4 </option>{" "}
+                  
+                  <option value="department4"> Department 5 </option>{" "}
                 </select>{" "}
                 <br /> <br /> <br />
                 Team <br />{" "}
